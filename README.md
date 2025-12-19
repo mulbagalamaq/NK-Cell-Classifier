@@ -6,7 +6,7 @@ from Foltz et al. 2024 (Science Immunology).
 ## Data Sources
 
 - GSE264696: CITE-seq (NK cells, 28-protein panel)
-- GSE264693: ATAC-seq (chromatin accessibility)
+
 
 ## Target Cell Types
 
