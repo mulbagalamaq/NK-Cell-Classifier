@@ -30,10 +30,19 @@ conda activate nk_analysis
 ## Notebooks
 
 ### 01_preprocessing_qc.ipynb
-Loaded CITE-seq data from two donors (21,167 cells), removed mouse spike-in genes, and applied QC filters (≥200 genes, <15% mito). Ran TOTALVI to jointly model 4,000 HVGs and 28 surface proteins with batch correction across donors. Annotated NK subsets using hierarchical protein gating: CD56bright (CD117+), CD56dim (CD57+CD16+), eML (NKG2A+ only). Final dataset: 19,443 cells with 20-dimensional latent embeddings and denoised protein expression.
+- Loaded CITE-seq data from two donors (21,167 cells, 28-protein panel)
+- Removed 31,053 mouse spike-in genes and applied QC filters (≥200 genes, <15% mito)
+- Ran TOTALVI to jointly model 4,000 HVGs and 28 surface proteins
+- Batch-corrected across donors, extracted 20-dimensional latent embeddings
+- Annotated NK subsets via hierarchical protein gating: CD56bright (CD117+), CD56dim (CD57+CD16+), eML (NKG2A+ only)
+- Final dataset: 19,443 cells with denoised protein expression
 
 ### 02_classifier_training.ipynb
-Trained classifiers on TOTALVI latent embeddings to predict protein-defined NK subsets from RNA features. Compared BalancedBaggingClassifier and XGBoost on 3-class problem (excluding ambiguous Unassigned cells). XGBoost achieved best performance (macro F1 = 0.789, 5-fold CV). eML classification remains challenging (F1 = 0.56) due to small sample size (4%) and phenotypic overlap with CD56bright.
+- Trained classifiers on TOTALVI latent embeddings to predict NK subsets from RNA
+- Compared BalancedBaggingClassifier and XGBoost on 3-class problem (excluding Unassigned)
+- XGBoost achieved best performance: macro F1 = 0.789 (5-fold CV)
+- eML classification challenging (F1 = 0.56) due to small sample size (4%) and phenotypic overlap
+- Saved trained models for downstream inference
 
 
 ## References
