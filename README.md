@@ -1,6 +1,6 @@
 # NK Cell Multimodal Single-Cell Analysis
 
-Analysis of NK cell differentiation using CITE-seq, scRNA-seq, and ATAC-seq data
+Analysis of NK cell differentiation using CITE-seq data
 from Foltz et al. 2024 (Science Immunology).
 
 ## Data Sources
