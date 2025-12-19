@@ -51,4 +51,3 @@ Foltz JA, Tran J, Wong P, Fan C, Schmidt E, Fisk B, Becker-Hapak M, Russler-Germ
 
 **Data availability:**
 - CITE-seq: [GSE264696](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE264696)
-- ATAC-seq: [GSE264693](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE264693)
